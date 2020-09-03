@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "872044105151",
+    "firebase_url": "https://clinicfinder-a08c0.firebaseio.com",
+    "project_id": "clinicfinder-a08c0",
+    "storage_bucket": "clinicfinder-a08c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872044105151:android:7915d97583ec556e7b650a",
+        "android_client_info": {
+          "package_name": "com.example.clinicFinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872044105151-4a8csfk1t1igcgns736fc00u7646er8l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.clinicFinder",
+            "certificate_hash": "4237f35b61eebecb41c8438e6e83f977fc50cc4d"
+          }
+        },
+        {
+          "client_id": "872044105151-vire3965l2rjposn3jjljuhn13qr56o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQq3DDGpZNJT6Nv1iOEMQX2ZB04o9O3EE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872044105151-vire3965l2rjposn3jjljuhn13qr56o9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
