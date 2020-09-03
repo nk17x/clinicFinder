@@ -4,9 +4,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/hearticon"
+        android:icon="@drawable/heart_health"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".urine"></activity>
