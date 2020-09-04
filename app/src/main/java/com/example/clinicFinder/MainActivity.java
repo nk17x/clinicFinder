@@ -194,6 +194,13 @@ Toolbar toolbar;
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch (menuItem.getItemId()){
+            case R.id.navigation_home:
+                mAuth.signOut();
+                Intent intent=new Intent(MainActivity.this,login.class);
+                startActivity(intent);
+                break;
+        }
         return true;
     }
 }
