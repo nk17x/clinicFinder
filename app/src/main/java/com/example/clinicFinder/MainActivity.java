@@ -195,7 +195,7 @@ Toolbar toolbar;
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()){
-            case R.id.navigation_home:
+            case R.id.navlogout:
                 mAuth.signOut();
                 Intent intent=new Intent(MainActivity.this,login.class);
                 startActivity(intent);

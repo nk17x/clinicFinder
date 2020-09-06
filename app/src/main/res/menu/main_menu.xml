@@ -1,24 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">\
     <group android:checkableBehavior="single">
 
+        <item
+            android:id="@+id/navhome"
+            android:title="Home"
+            android:icon="@drawable/navhome"
+            />
 
+        <item
+            android:id="@+id/navappointments"
+            android:title="Appointments"
+            android:icon="@drawable/navappointments"/>
+        <item
+            android:id="@+id/navclinic"
+            android:title="Clinic"
+            android:icon="@drawable/navclinic"/>
+        <item
+                android:id="@+id/navdoctors"
+                android:title="Doctors"
+                android:icon="@drawable/navmydoctor"/>
+        <item
+            android:id="@+id/navconsultations"
+            android:title="Consultations"
+            android:icon="@drawable/navconsultation"/>
+        <item
+            android:id="@+id/navmedicalrecords"
+            android:title="Records"
+            android:icon="@drawable/record">
+        </item></group>
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Profile">
+        <menu>
+        <item
+            android:id="@+id/navaccount"
+            android:title="Account"
+            android:icon="@drawable/navaccount"
+            />
+            <item
+                android:id="@+id/navlogout"
+                android:title="Logout"
+                android:icon="@drawable/logout">
+            </item>
 
+        </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
         <item
-            android:id="@+id/navigation_home1"
-            android:title="profile"
-            android:icon="@drawable/profile"/>
-        <item
-            android:id="@+id/navigation_home2"
-            android:title="your appointments"
-            android:icon="@drawable/appointment"/>
-        <item
-            android:id="@+id/navigation_home3"
-            android:title="talk to us"
-            android:icon="@drawable/support"/>
-        <item
-        android:id="@+id/navigation_home"
-        android:title="logout"
-        android:icon="@drawable/logout"/>
+            android:title="Connect to us">
+            <menu>
+                <item
+                    android:id="@+id/navabout"
+                    android:title="About Clinic Finder"
+                    android:icon="@drawable/navabout">
+
+                </item>
+                <item
+                    android:id="@+id/navcontact"
+                    android:title="Contact Us"
+                    android:icon="@drawable/navcontact">
+                </item>
+                <item
+                    android:id="@+id/navshare"
+                    android:title="Share to Friends"
+                    android:icon="@drawable/navshare">
+                </item>
+                <item
+                    android:id="@+id/navreport"
+                    android:title="Report Problem"
+                    android:icon="@drawable/navreport">
+
+                </item></menu>
+        </item>
     </group>
 </menu>
