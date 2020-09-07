@@ -16,16 +16,16 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class registration extends AppCompatActivity {
-    Button button;
-    EditText editText,editText2,editText5,editText6;
+    Button button,login;
     TextView textView2;
-    ProgressBar progressBar;
+    TextInputEditText textphoneno,textfullname,textemail,textpassword;
     FirebaseAuth mAuth;
     FirebaseDatabase rootNode;
     DatabaseReference databaseReference;
@@ -38,10 +38,15 @@ public class registration extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
         mAuth=FirebaseAuth.getInstance();
         initilaize();
+        textphoneno=findViewById(R.id.phoneno);
+        textemail=findViewById(R.id.email);
+        textpassword=findViewById(R.id.password);
+        textfullname=findViewById(R.id.fullname);
+        login=findViewById(R.id.login);
         rootNode=FirebaseDatabase.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("users");
 
-        textView2.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i =new Intent(registration.this,login.class);
@@ -54,30 +59,34 @@ public class registration extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 databaseReference=rootNode.getReference("users");
-                phone=editText6.getText().toString();
-                fullname =editText5.getText().toString();
-                email=editText.getText().toString();
-                password =editText2.getText().toString();
+                phone=textphoneno.getText().toString();
+                fullname =textfullname.getText().toString();
+                email=textemail.getText().toString();
+                password =textpassword.getText().toString();
                 String str = email;
-                String [] twoStringArray= str.split("@",2);
-                final String username= twoStringArray[0];
+                String username=null;
+                if(str.contains(".")){
+                    String [] twoStringArray2= str.split(".",2);
+                    username= twoStringArray2[0];
+                }else{String [] twoStringArray= str.split("@",2);
+                   username= twoStringArray[0];}
                 UserHelperClass helperClass= new UserHelperClass(fullname,phone,email,password,username);
                 databaseReference.child(username).setValue(helperClass);
                     if(TextUtils.isEmpty(email)){
-                        editText.setError("enter email");
+                        textemail.setError("enter email");
                         return;
                     }
                    if(TextUtils.isEmpty(password)){
-                        editText2.setError("enter password");
+                       textpassword.setError("enter password");
                    return;}
                 if(TextUtils.isEmpty(phone)){
-                    editText6.setError("enter phone no");
+                    textphoneno.setError("enter phone no");
                     return;
                 }
                 if(TextUtils.isEmpty(fullname)){
-                    editText5.setError("enter fullname");
+                    textfullname.setError("enter fullname");
                     return;}
-                progressBar.setVisibility(View.VISIBLE);
+
                    if(registerstatus){
                        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                            @Override
@@ -85,7 +94,7 @@ public class registration extends AppCompatActivity {
                                if(task.isSuccessful()){
                                    Log.i("login","register is going");
                                    registerstatus=false;
-                                   progressBar.setVisibility(View.GONE);
+
                                    Intent i =new Intent(registration.this,login.class);
                                    startActivity(i);
                                    Toast.makeText(registration.this, "registeration succesfull", Toast.LENGTH_SHORT).show();
@@ -120,12 +129,7 @@ public class registration extends AppCompatActivity {
 
     public void initilaize(){
             button=findViewById(R.id.button);
-            editText=findViewById(R.id.editText);
-            editText2=findViewById(R.id.editText2);
-            editText5=findViewById(R.id.editText5);
-            editText6=findViewById(R.id.editText6);
-            textView2=findViewById(R.id.textView2);
-            progressBar=findViewById(R.id.progressBar);
-            progressBar.setVisibility(View.INVISIBLE);
+
+
     }
 }

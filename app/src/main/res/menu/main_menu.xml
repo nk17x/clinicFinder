@@ -72,7 +72,6 @@
                     android:id="@+id/navreport"
                     android:title="Report Problem"
                     android:icon="@drawable/navreport">
-
                 </item></menu>
         </item>
     </group>

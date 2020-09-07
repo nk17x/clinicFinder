@@ -16,29 +16,31 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class login extends AppCompatActivity {
-    Button button2;
-    EditText editText3,editText4;
-    TextView textView3;
-    ProgressBar progressBar2;
+    Button button2,signup;
+    TextView textView3,forgotpassword;
     FirebaseAuth mAuth;
-
+    TextInputEditText usernameedit,passwordedit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mAuth=FirebaseAuth.getInstance();
         initilaize();
+        forgotpassword=findViewById(R.id.forgotpassword);
+        usernameedit=findViewById(R.id.username);
+        passwordedit=findViewById(R.id.password);
         if(mAuth.getCurrentUser() !=null){
             Intent i =new Intent(login.this,MainActivity.class);
             startActivity(i);
             finish();
         }
 
-        textView3.setOnClickListener(new View.OnClickListener() {
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i =new Intent(login.this,registration.class);
@@ -51,20 +53,20 @@ public class login extends AppCompatActivity {
             public void onClick(View v) {
 
                 String email, password;
-                email = editText3.getText().toString();
-                password = editText4.getText().toString();
+                email = usernameedit.getText().toString();
+                password = passwordedit.getText().toString();
                 String str = email;
                 String [] twoStringArray= str.split("@",2);
                 final String username= twoStringArray[0];
                 if (TextUtils.isEmpty(email)) {
-                    editText3.setError("enter email");
+                    usernameedit.setError("enter email");
                     return;
                 }
                 if (TextUtils.isEmpty(password)) {
-                    editText4.setError("enter password");
+                    passwordedit.setError("enter password");
                     return;
                 }
-                progressBar2.setVisibility(View.VISIBLE);
+
                 mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -75,7 +77,7 @@ public class login extends AppCompatActivity {
                             startActivity(i);
                             finish();
                         }else{
-                            progressBar2.setVisibility(View.INVISIBLE);
+
                             Toast.makeText(login.this, "enter valid details...", Toast.LENGTH_SHORT).show();
                         }
 
@@ -87,14 +89,27 @@ public class login extends AppCompatActivity {
 
 
     });
+        forgotpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email=usernameedit.getText().toString();
+               mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
+                   @Override
+                   public void onComplete(@NonNull Task<Void> task) {
+                       if(task.isSuccessful()){
+                           Toast.makeText(login.this, "sent code", Toast.LENGTH_SHORT).show();
+                       }else{
+                           Toast.makeText(login.this, "error sending", Toast.LENGTH_SHORT).show();
+                       }
+                   }
+               });
+            }
+        });
 }
     public void initilaize() {
         button2 = findViewById(R.id.button2);
-        editText3 = findViewById(R.id.editText3);
-        editText4 = findViewById(R.id.editText4);
-        textView3 = findViewById(R.id.textView3);
-        textView3.setVisibility(View.VISIBLE);
-        progressBar2 = findViewById(R.id.progressBar2);
-        progressBar2.setVisibility(View.INVISIBLE);
+        signup = findViewById(R.id.signup);
+
+
     }
 }

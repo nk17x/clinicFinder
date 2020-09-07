@@ -16,6 +16,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -38,12 +39,14 @@ NavigationView navigationView;
 Toolbar toolbar;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mAuth=FirebaseAuth.getInstance();
         /*textView22=findViewById(R.id.textView22);*/
+
         textView10=findViewById(R.id.textView10);
         textView12=findViewById(R.id.textView12);
         textView11=findViewById(R.id.textView11);
@@ -168,16 +171,6 @@ Toolbar toolbar;
                 Intent i =new Intent(MainActivity.this,expert.class);
                 startActivity(i);            }
         });
-        /*button3=findViewById(R.id.button3);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mAuth.signOut();
-                Intent i =new Intent(MainActivity.this,login.class);
-                startActivity(i);
-                finish();
-            }
-        });*/
 
 
 
@@ -197,8 +190,12 @@ Toolbar toolbar;
         switch (menuItem.getItemId()){
             case R.id.navlogout:
                 mAuth.signOut();
-                Intent intent=new Intent(MainActivity.this,login.class);
-                startActivity(intent);
+                Intent intentlogout=new Intent(MainActivity.this,login.class);
+                startActivity(intentlogout);
+                finish();
+                break;
+            case R.id.navhome:
+                drawerLayout.closeDrawer(GravityCompat.START);
                 break;
         }
         return true;
