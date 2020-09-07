@@ -38,11 +38,7 @@ public class registration extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
         mAuth=FirebaseAuth.getInstance();
         initilaize();
-        textphoneno=findViewById(R.id.phoneno);
-        textemail=findViewById(R.id.email);
-        textpassword=findViewById(R.id.password);
-        textfullname=findViewById(R.id.fullname);
-        login=findViewById(R.id.login);
+
         rootNode=FirebaseDatabase.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("users");
 
@@ -128,8 +124,12 @@ public class registration extends AppCompatActivity {
         }
 
     public void initilaize(){
-            button=findViewById(R.id.button);
-
+        button=findViewById(R.id.button);
+        login=findViewById(R.id.login);
+        textphoneno=findViewById(R.id.phoneno);
+        textemail=findViewById(R.id.email);
+        textpassword=findViewById(R.id.password);
+        textfullname=findViewById(R.id.fullname);
 
     }
 }

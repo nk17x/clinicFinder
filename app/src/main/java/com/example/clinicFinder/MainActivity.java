@@ -197,6 +197,11 @@ Toolbar toolbar;
             case R.id.navhome:
                 drawerLayout.closeDrawer(GravityCompat.START);
                 break;
+            case R.id.navaccount:
+                Intent intentaccount=new Intent(MainActivity.this,profile.class);
+                startActivity(intentaccount);
+                finish();
+                break;
         }
         return true;
     }
