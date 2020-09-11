@@ -651,6 +651,7 @@
                 android:layout_marginTop="3dp"
                 android:background="#E95C6BC0"
                 android:minHeight="?attr/actionBarSize"
+                android:paddingLeft="10dp"
                 android:theme="?attr/actionBarTheme"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

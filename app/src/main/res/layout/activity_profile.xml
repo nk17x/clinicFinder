@@ -12,21 +12,23 @@
         android:layout_width="0dp"
         android:layout_height="53dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/baloo"
         android:text="profile"
         android:textAlignment="textStart"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <LinearLayout
         android:id="@+id/linearLayoutCompat1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="256dp"
+        android:layout_marginBottom="184dp"
         android:orientation="vertical"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
@@ -48,7 +50,7 @@
                 android:id="@+id/profullname"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:inputType="textEmailAddress" />
+                android:inputType="textPersonName" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,7 +65,8 @@
                 android:id="@+id/prophoneno"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:inputType="textEmailAddress" />
+                android:layout_marginTop="8dp"
+                android:inputType="phone" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,6 +81,7 @@
                 android:id="@+id/proemail"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
+                android:layout_marginTop="8dp"
                 android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -94,9 +98,9 @@
                 android:id="@+id/propassword"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:inputType="textPassword"
+                android:layout_marginTop="8dp"
 
-                />
+                android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -109,7 +113,7 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/gradient1"
             android:foreground="#00000000"
-            android:text="update"
+            android:text="update profile"
             android:textColor="#000000" />
 
         <com.google.android.material.button.MaterialButton

@@ -45,8 +45,8 @@ public class profile extends AppCompatActivity {
         username= twoStringArray[0];
         firebaseDatabase=FirebaseDatabase.getInstance();
         databaseReference=FirebaseDatabase.getInstance().getReference("users");
-        Query userdetails1 = databaseReference.orderByChild("username").equalTo(username);
-        userdetails1.addListenerForSingleValueEvent(new ValueEventListener(){
+        Query userdetails2 = databaseReference.orderByChild("username").equalTo(username);
+        userdetails2.addListenerForSingleValueEvent(new ValueEventListener(){
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
@@ -84,11 +84,11 @@ public class profile extends AppCompatActivity {
                 protpassword =propassword.getText().toString();
                 String str = protemail;
                 String username=null;
-                if(str.contains(".")){
-                    String [] twoStringArray2= str.split(".",2);
-                    username= twoStringArray2[0];
-                }else{String [] twoStringArray= str.split("@",2);
-                    username= twoStringArray[0];}
+                String [] twoStringArray2= str.split(".",2);
+                username= twoStringArray2[0];
+                Toast.makeText(profile.this, username+"", Toast.LENGTH_SHORT).show();
+                String [] twoStringArray= str.split("@",2);
+                username= twoStringArray[0];
                 UserHelperClass helperClass= new UserHelperClass(protfullname,protphone,protemail,protpassword,username);
                 databaseReference.child(username).setValue(helperClass);
                 if(TextUtils.isEmpty(protemail)){

@@ -54,18 +54,16 @@ public class registration extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                databaseReference=rootNode.getReference("users");
+
                 phone=textphoneno.getText().toString();
                 fullname =textfullname.getText().toString();
                 email=textemail.getText().toString();
                 password =textpassword.getText().toString();
                 String str = email;
-                String username=null;
-                if(str.contains(".")){
-                    String [] twoStringArray2= str.split(".",2);
-                    username= twoStringArray2[0];
-                }else{String [] twoStringArray= str.split("@",2);
-                   username= twoStringArray[0];}
+                String username="";
+                String [] twoStringArray= str.split("@",2);
+                username= twoStringArray[0];
+                databaseReference=rootNode.getReference("users");
                 UserHelperClass helperClass= new UserHelperClass(fullname,phone,email,password,username);
                 databaseReference.child(username).setValue(helperClass);
                     if(TextUtils.isEmpty(email)){
