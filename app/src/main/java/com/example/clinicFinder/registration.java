@@ -31,6 +31,8 @@ public class registration extends AppCompatActivity {
     DatabaseReference databaseReference;
     boolean registerstatus=true;
     String email,password,phone,fullname;
+    String username;
+    UserHelperClass helperClass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,36 +61,39 @@ public class registration extends AppCompatActivity {
                 fullname =textfullname.getText().toString();
                 email=textemail.getText().toString();
                 password =textpassword.getText().toString();
-                String str = email;
-                String username="";
-                String [] twoStringArray= str.split("@",2);
-                username= twoStringArray[0];
-                databaseReference=rootNode.getReference("users");
-                UserHelperClass helperClass= new UserHelperClass(fullname,phone,email,password,username);
-                databaseReference.child(username).setValue(helperClass);
-                    if(TextUtils.isEmpty(email)){
-                        textemail.setError("enter email");
-                        return;
-                    }
-                   if(TextUtils.isEmpty(password)){
-                       textpassword.setError("enter password");
-                   return;}
-                if(TextUtils.isEmpty(phone)){
-                    textphoneno.setError("enter phone no");
+                if(TextUtils.isEmpty(fullname)){
+                    textfullname.setError("Enter Valid FullName");
                     return;
                 }
-                if(TextUtils.isEmpty(fullname)){
-                    textfullname.setError("enter fullname");
-                    return;}
-
-                   if(registerstatus){
+                if(phone.length()<10){
+                    textphoneno.setError("Enter Valid Phone No");
+                    return;
+                }
+                if(email.indexOf("@")==-1){
+                    textemail.setError("Enter Valid Email");
+                    return;
+                }
+                if(password.length()<8){
+                    textpassword.setError("Enter Valid Password");
+                    return;
+                }
+                String str = email;
+                username="";
+                if(str.indexOf(".")!=-1){
+                    String [] twoStringArray= str.split("\\.",2);
+                    username= twoStringArray[0];
+                }else{
+                String [] twoStringArray2= str.split("@",2);
+                username= twoStringArray2[0];}
+                databaseReference=rootNode.getReference("users");
+                helperClass= new UserHelperClass(fullname,phone,email,username);
+                if(registerstatus){
                        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                            @Override
                            public void onComplete(@NonNull Task<AuthResult> task) {
                                if(task.isSuccessful()){
-                                   Log.i("login","register is going");
+                                   databaseReference.child(username).setValue(helperClass);
                                    registerstatus=false;
-
                                    Intent i =new Intent(registration.this,login.class);
                                    startActivity(i);
                                    Toast.makeText(registration.this, "registeration succesfull", Toast.LENGTH_SHORT).show();
@@ -97,24 +102,13 @@ public class registration extends AppCompatActivity {
                                }
                                else{
                                    Toast.makeText(registration.this, "not succesfull", Toast.LENGTH_SHORT).show();
-                               }
-                           }
-                       });
-                   }
-                   else{
-                       mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                           @Override
-                           public void onComplete(@NonNull Task<AuthResult> task) {
-                               if(task.isSuccessful()){
-                                   Log.i("login","login is going");
-                                   Intent i =new Intent(registration.this,MainActivity.class);
-                                   startActivity(i);
-                                   finish();
+                                   return;
                                }
 
                            }
-                       }); }
+                       });
                    }
+            }
 
 
 

@@ -51,22 +51,20 @@ public class login extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 String email, password;
                 email = usernameedit.getText().toString();
                 password = passwordedit.getText().toString();
-                String str = email;
-                String [] twoStringArray= str.split("@",2);
-                final String username= twoStringArray[0];
                 if (TextUtils.isEmpty(email)) {
-                    usernameedit.setError("enter email");
+                    usernameedit.setError("Enter Valid Email");
                     return;
                 }
                 if (TextUtils.isEmpty(password)) {
-                    passwordedit.setError("enter password");
+                    passwordedit.setError("Enter Valid Password");
                     return;
                 }
-
+                String str = email;
+                String [] twoStringArray= str.split("@",2);
+                final String username= twoStringArray[0];
                 mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -93,18 +91,20 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String email=usernameedit.getText().toString();
-               mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
+                if(TextUtils.isEmpty(email)){
+                    usernameedit.setError("enter email");
+                    return;
+                }
+                mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
                    @Override
                    public void onComplete(@NonNull Task<Void> task) {
                        if(task.isSuccessful()){
-                           Toast.makeText(login.this, "sent code", Toast.LENGTH_SHORT).show();
+                           Toast.makeText(login.this, "Password Reset Email Sent Successful", Toast.LENGTH_SHORT).show();
                        }else{
-                           Toast.makeText(login.this, "error sending", Toast.LENGTH_SHORT).show();
+                           Toast.makeText(login.this, "Enter Valid Email Address", Toast.LENGTH_SHORT).show();
                        }
-                   }
-               });
-            }
-        });
+                   }               });
+            }        });
 }
     public void initilaize() {
         button2 = findViewById(R.id.button2);

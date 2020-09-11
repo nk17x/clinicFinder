@@ -66,7 +66,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginTop="8dp"
-                android:inputType="phone" />
+                android:inputType="phone"
+                android:maxLength="10" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,24 +84,6 @@
                 android:layout_height="55dp"
                 android:layout_marginTop="8dp"
                 android:inputType="textEmailAddress" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            app:passwordToggleEnabled="true">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/propassword"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_marginTop="8dp"
-
-                android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

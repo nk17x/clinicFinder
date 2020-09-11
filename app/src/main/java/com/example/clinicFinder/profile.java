@@ -21,12 +21,12 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class profile extends AppCompatActivity {
-    TextInputEditText prophoneno,profullname,proemail,propassword;
+    TextInputEditText prophoneno,profullname,proemail;
     Button proupdate,proback;
     FirebaseAuth mAuth;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    String protemail,protpassword,protphone,protfullname;
+    String protemail,protphone,protfullname;
     String username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +37,15 @@ public class profile extends AppCompatActivity {
         proback=findViewById(R.id.proback);
         prophoneno=findViewById(R.id.prophoneno);
         proemail=findViewById(R.id.proemail);
-        propassword=findViewById(R.id.propassword);
         profullname=findViewById(R.id.profullname);
         String email=mAuth.getCurrentUser().getEmail();
         String str = email;
-        String [] twoStringArray= str.split("@",2);
-        username= twoStringArray[0];
+        if(str.indexOf(".")!=-1){
+            String [] twoStringArray= str.split("\\.",2);
+            username= twoStringArray[0];
+        }else{
+            String [] twoStringArray2= str.split("@",2);
+            username= twoStringArray2[0];}
         firebaseDatabase=FirebaseDatabase.getInstance();
         databaseReference=FirebaseDatabase.getInstance().getReference("users");
         Query userdetails2 = databaseReference.orderByChild("username").equalTo(username);
@@ -53,13 +56,10 @@ public class profile extends AppCompatActivity {
                     String fullnameFromDb=dataSnapshot.child(username).child("fullname").getValue(String.class);
                     String phoneFromDb=dataSnapshot.child(username).child("phone").getValue(String.class);
                     String emailFromDb=dataSnapshot.child(username).child("email").getValue(String.class);
-                    String passwordFromDb=dataSnapshot.child(username).child("password").getValue(String.class);
                     Toast.makeText(profile.this, emailFromDb, Toast.LENGTH_SHORT).show();
                     proemail.setText(emailFromDb);
-                    propassword.setText(passwordFromDb);
                     profullname.setText(fullnameFromDb);
                     prophoneno.setText(phoneFromDb);
-
                 }
             }
 
@@ -81,23 +81,20 @@ public class profile extends AppCompatActivity {
                 protphone=prophoneno.getText().toString();
                 protfullname =profullname.getText().toString();
                 protemail=proemail.getText().toString();
-                protpassword =propassword.getText().toString();
                 String str = protemail;
                 String username=null;
-                String [] twoStringArray2= str.split(".",2);
-                username= twoStringArray2[0];
-                Toast.makeText(profile.this, username+"", Toast.LENGTH_SHORT).show();
-                String [] twoStringArray= str.split("@",2);
-                username= twoStringArray[0];
-                UserHelperClass helperClass= new UserHelperClass(protfullname,protphone,protemail,protpassword,username);
+                if(str.indexOf(".")!=-1){
+                    String [] twoStringArray= str.split("\\.",2);
+                    username= twoStringArray[0];
+                }else{
+                    String [] twoStringArray2= str.split("@",2);
+                    username= twoStringArray2[0];}
+                UserHelperClass helperClass= new UserHelperClass(protfullname,protphone,protemail,username);
                 databaseReference.child(username).setValue(helperClass);
                 if(TextUtils.isEmpty(protemail)){
                    proemail.setError("enter email");
                     return;
                 }
-                if(TextUtils.isEmpty(protpassword)){
-                    propassword.setError("enter password");
-                    return;}
                 if(TextUtils.isEmpty(protphone)){
                     prophoneno.setError("enter phone no");
                     return;
