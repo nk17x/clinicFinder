@@ -80,7 +80,9 @@ public class registration extends AppCompatActivity {
                 String str = email;
                 username="";
                 if(str.indexOf(".")!=-1){
-                    String [] twoStringArray= str.split("\\.",2);
+                    String [] twoStringArray2= str.split("@",2);
+                    String username2= twoStringArray2[0];
+                    String [] twoStringArray= username2.split("\\.",2);
                     username= twoStringArray[0];
                 }else{
                 String [] twoStringArray2= str.split("@",2);
