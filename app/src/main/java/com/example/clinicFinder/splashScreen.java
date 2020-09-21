@@ -14,7 +14,7 @@ public class splashScreen extends AppCompatActivity {
         Thread thread =new Thread(){
             public void run(){
                 try{
-                    sleep(500);
+                    sleep(300);
                 }catch(Exception e){
                     e.printStackTrace();
                 }finally {
