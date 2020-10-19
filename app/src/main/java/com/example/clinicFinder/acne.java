@@ -18,18 +18,13 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.Hashtable;
 
 public class acne extends AppCompatActivity {
-    FirebaseAuth mAuth;
-    FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference;
     TextView textView1, textView2, textView3, textView4, textView6, textView7, textView8, textView10, textView11, textView12, textView14, textView15, textView16, textView18, textView19, textView20, textView21, textView23, textView24, textView22, textView26, textView28, textView29, textView31, textView32, textView33, textView35, textView36, textView37, textView39, textView40, textView41, textView43, textView44, textView45, textView47, textView48, textView49, textView51, textView52, textView53;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acne);
-        Hashtable<String, String> my_dict = new Hashtable<String, String>();
-        mAuth = FirebaseAuth.getInstance();
-        textView1 = findViewById(R.id.textViewa1);
+
         textView2 = findViewById(R.id.textViewa2);
         textView3 = findViewById(R.id.textViewa3);
         textView4 = findViewById(R.id.textViewa4);
@@ -69,31 +64,6 @@ public class acne extends AppCompatActivity {
         textView51 = findViewById(R.id.textViewa51);
         textView52 = findViewById(R.id.textViewa52);
         textView53 = findViewById(R.id.textViewa53);
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = FirebaseDatabase.getInstance().getReference("doctors");
-        Query userdetails3 = databaseReference.orderByChild("dermatologistt");
-        userdetails3.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                        for (int i = 101; i <= 113; i++) {
-                            String expFromDb = dataSnapshot.child("dermatologistt").child(String.valueOf(i)).child("experience").getValue(String.class);
-                            String nameFromDb = dataSnapshot.child("dermatologistt").child(String.valueOf(i)).child("name").getValue(String.class);
-                            String speFromDb = dataSnapshot.child("dermatologistt").child(String.valueOf(i)).child("speciality").getValue(String.class);
 
-                        }
-
-
-
-                } else {
-                    Toast.makeText(acne.this, "data snap not exist", Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-            }
-        });
-        textView2.setText("zahida");
     }
 }

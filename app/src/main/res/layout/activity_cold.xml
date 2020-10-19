@@ -28,19 +28,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp">
-
-                    <TextView
-                        android:id="@+id/textViewc1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
+                   android:layout_height="130dp">
 
                     <ImageView
                         android:id="@+id/imageViewc1"
@@ -49,7 +37,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/c1" />
 
                     <TextView
                         android:id="@+id/textViewc2"
@@ -58,7 +46,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Mandeep Singh"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -83,7 +71,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="12 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -97,19 +85,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp">
-
-                    <TextView
-                        android:id="@+id/textViewc5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
+                   android:layout_height="130dp">
 
                     <ImageView
                         android:id="@+id/imageViewc2"
@@ -118,7 +94,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/c2" />
 
                     <TextView
                         android:id="@+id/textViewc6"
@@ -127,7 +103,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Nitin Thorat"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -152,7 +128,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="7 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -166,19 +142,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp">
-
-                    <TextView
-                        android:id="@+id/textViewc9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
+                   android:layout_height="130dp">
 
                     <ImageView
                         android:id="@+id/imageViewc3"
@@ -187,7 +151,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/c3" />
 
                     <TextView
                         android:id="@+id/textViewc10"
@@ -196,7 +160,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Munir Khan"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -221,7 +185,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="11 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -235,19 +199,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp">
-
-                    <TextView
-                        android:id="@+id/textViewc13"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
+                   android:layout_height="130dp">
 
                     <ImageView
                         android:id="@+id/imageViewc4"
@@ -256,7 +208,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/c4" />
 
                     <TextView
                         android:id="@+id/textViewc14"
@@ -265,7 +217,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Abhishek Taksale"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -290,7 +242,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="9 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -304,19 +256,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp">
-
-                    <TextView
-                        android:id="@+id/textViewc17"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
+                   android:layout_height="130dp">
 
                     <ImageView
                         android:id="@+id/imageViewc5"
@@ -325,7 +265,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/c5" />
 
                     <TextView
                         android:id="@+id/textViewc18"
@@ -334,7 +274,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Divya Sharma"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -359,7 +299,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="7 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -373,19 +313,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp">
-
-                    <TextView
-                        android:id="@+id/textViewc21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
+                   android:layout_height="130dp">
 
                     <ImageView
                         android:id="@+id/imageViewc6"
@@ -394,7 +322,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/c6" />
 
                     <TextView
                         android:id="@+id/textViewc22"
@@ -403,7 +331,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Nayak Ambik"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -428,7 +356,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="5 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -442,19 +370,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp">
-
-                    <TextView
-                        android:id="@+id/textViewc25"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
+                   android:layout_height="130dp">
 
                     <ImageView
                         android:id="@+id/imageViewc7"
@@ -463,7 +379,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/c7" />
 
                     <TextView
                         android:id="@+id/textViewc26"
@@ -472,7 +388,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Yogesh Chavan"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -497,7 +413,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="4 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -511,19 +427,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp">
-
-                    <TextView
-                        android:id="@+id/textViewc30"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
+                   android:layout_height="130dp">
 
                     <ImageView
                         android:id="@+id/imageViewc8"
@@ -532,7 +436,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/c8" />
 
                     <TextView
                         android:id="@+id/textViewc31"
@@ -541,7 +445,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Nitin kochar"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -566,7 +470,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="5 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -580,19 +484,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp">
-
-                    <TextView
-                        android:id="@+id/textViewc34"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
+                   android:layout_height="130dp">
 
                     <ImageView
                         android:id="@+id/imageViewc9"
@@ -601,7 +493,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/c9" />
 
                     <TextView
                         android:id="@+id/textViewc35"
@@ -610,7 +502,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Anil Gupta"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -635,7 +527,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="3 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -649,19 +541,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp">
-
-                    <TextView
-                        android:id="@+id/textViewc38"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
+                   android:layout_height="130dp">
 
                     <ImageView
                         android:id="@+id/imageViewc10"
@@ -670,7 +550,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/c10" />
 
                     <TextView
                         android:id="@+id/textViewc39"
@@ -679,7 +559,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Ravinder Singh"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -704,7 +584,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="2 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -718,19 +598,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp">
-
-                    <TextView
-                        android:id="@+id/textViewc42"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
+                   android:layout_height="130dp">
 
                     <ImageView
                         android:id="@+id/imageViewc11"
@@ -739,7 +607,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/c11" />
 
                     <TextView
                         android:id="@+id/textViewc43"
@@ -748,7 +616,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Bhavna Joshi"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -773,7 +641,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="2 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -787,19 +655,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp">
-
-                    <TextView
-                        android:id="@+id/textViewc46"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
+                   android:layout_height="130dp">
 
                     <ImageView
                         android:id="@+id/imageViewc12"
@@ -808,7 +664,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/c12" />
 
                     <TextView
                         android:id="@+id/textViewc47"
@@ -817,7 +673,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Santosh Tale"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -842,7 +698,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="4 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -856,19 +712,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp">
-
-                    <TextView
-                        android:id="@+id/textViewc50"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
+                   android:layout_height="130dp">
 
                     <ImageView
                         android:id="@+id/imageViewc13"
@@ -877,7 +721,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/c13" />
 
                     <TextView
                         android:id="@+id/textViewc51"
@@ -886,7 +730,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Jaideep Singh"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -911,7 +755,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="3 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
