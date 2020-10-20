@@ -58,7 +58,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Dermatologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -115,7 +115,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Dermatologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -172,7 +172,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Dermatologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -229,7 +229,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Dermatologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -286,7 +286,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Dermatologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -343,7 +343,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Dermatologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -400,7 +400,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Dermatologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -457,7 +457,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Dermatologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -514,7 +514,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Dermatologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -571,7 +571,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Dermatologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -628,7 +628,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Dermatologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -685,7 +685,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Dermatologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -742,7 +742,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Dermatologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".pregnancy">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -26,18 +27,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp">
 
-                    <TextView
-                        android:id="@+id/textViewp1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
-
                     <ImageView
                         android:id="@+id/imageViewp1"
                         android:layout_width="110dp"
@@ -45,7 +34,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/g1" />
 
                     <TextView
                         android:id="@+id/textViewp2"
@@ -54,7 +43,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Deepika Doshi"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -67,7 +56,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Gynaecologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -79,7 +68,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="8 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -95,18 +84,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp">
 
-                    <TextView
-                        android:id="@+id/textViewp5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
-
                     <ImageView
                         android:id="@+id/imageViewp2"
                         android:layout_width="110dp"
@@ -114,7 +91,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/g2" />
 
                     <TextView
                         android:id="@+id/textViewp6"
@@ -123,7 +100,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Shikha Gurnami"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -136,7 +113,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Gynaecologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -148,7 +125,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="7 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -164,18 +141,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp">
 
-                    <TextView
-                        android:id="@+id/textViewp9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
-
                     <ImageView
                         android:id="@+id/imageViewp3"
                         android:layout_width="110dp"
@@ -183,7 +148,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/g3" />
 
                     <TextView
                         android:id="@+id/textViewp10"
@@ -192,7 +157,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Archana Dubey"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -205,7 +170,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Gynaecologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -217,7 +182,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="5 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -233,18 +198,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp">
 
-                    <TextView
-                        android:id="@+id/textViewp13"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
-
                     <ImageView
                         android:id="@+id/imageViewp4"
                         android:layout_width="110dp"
@@ -252,7 +205,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/g4" />
 
                     <TextView
                         android:id="@+id/textViewp14"
@@ -261,7 +214,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Sheela Chabbra"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -274,7 +227,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Gynaecologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -286,7 +239,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="4 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -302,18 +255,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp">
 
-                    <TextView
-                        android:id="@+id/textViewp17"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
-
                     <ImageView
                         android:id="@+id/imageViewp5"
                         android:layout_width="110dp"
@@ -321,7 +262,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/g5" />
 
                     <TextView
                         android:id="@+id/textViewp18"
@@ -330,7 +271,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Ajit Patil"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -343,7 +284,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Gynaecologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -355,7 +296,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text=" 3 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -371,18 +312,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp">
 
-                    <TextView
-                        android:id="@+id/textViewp21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
-
                     <ImageView
                         android:id="@+id/imageViewp6"
                         android:layout_width="110dp"
@@ -390,7 +319,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/g6" />
 
                     <TextView
                         android:id="@+id/textViewp22"
@@ -399,7 +328,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Supriya Ghiya"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -412,7 +341,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Gynaecologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -424,7 +353,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="4 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -440,18 +369,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp">
 
-                    <TextView
-                        android:id="@+id/textViewp25"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
-
                     <ImageView
                         android:id="@+id/imageViewp7"
                         android:layout_width="110dp"
@@ -459,7 +376,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/g7" />
 
                     <TextView
                         android:id="@+id/textViewp26"
@@ -468,7 +385,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Leena Dnyanesh"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -481,7 +398,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Gynaecologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -493,7 +410,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="3 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -509,18 +426,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp">
 
-                    <TextView
-                        android:id="@+id/textViewp30"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
-
                     <ImageView
                         android:id="@+id/imageViewp8"
                         android:layout_width="110dp"
@@ -528,7 +433,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/g8" />
 
                     <TextView
                         android:id="@+id/textViewp31"
@@ -537,7 +442,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Vaishali Chavan"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -550,7 +455,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Gynaecologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -562,7 +467,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="3 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -578,18 +483,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp">
 
-                    <TextView
-                        android:id="@+id/textViewp34"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="false"
-                        android:layout_marginStart="165dp"
-                        android:layout_marginTop="110dp"
-                        android:text="know more"
-                        android:textAlignment="center"
-                        android:textColor="#42A5F5"
-                        android:textSize="18sp" />
-
                     <ImageView
                         android:id="@+id/imageViewp9"
                         android:layout_width="110dp"
@@ -597,7 +490,7 @@
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="15dp"
-                        app:srcCompat="@drawable/heart_health" />
+                        app:srcCompat="@drawable/g9" />
 
                     <TextView
                         android:id="@+id/textViewp35"
@@ -606,7 +499,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="25dp"
-                        android:text="Dr.Shilpa Abhyankar"
+                        android:text="Dr.Parul Jain"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -619,7 +512,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="50dp"
-                        android:text="General Physician"
+                        android:text="Gynaecologist"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
@@ -631,7 +524,7 @@
                         android:layout_centerInParent="false"
                         android:layout_marginStart="160dp"
                         android:layout_marginTop="75dp"
-                        android:text="26 years experience"
+                        android:text="2 years experience"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="18sp" />
