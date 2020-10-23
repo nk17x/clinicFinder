@@ -58,7 +58,6 @@ public class profile extends AppCompatActivity {
                     String fullnameFromDb=dataSnapshot.child(username).child("fullname").getValue(String.class);
                     String phoneFromDb=dataSnapshot.child(username).child("phone").getValue(String.class);
                     String emailFromDb=dataSnapshot.child(username).child("email").getValue(String.class);
-                    Toast.makeText(profile.this, emailFromDb, Toast.LENGTH_SHORT).show();
                     proemail.setText(emailFromDb);
                     profullname.setText(fullnameFromDb);
                     prophoneno.setText(phoneFromDb);
