@@ -5,9 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:backgroundTint="#FFFFFF"
-    android:backgroundTintMode="add"
+    android:background="#E95C6BC0"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity"
     tools:openDrawer="start">
@@ -41,7 +39,6 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:background="#E95C6BC0"
-                android:backgroundTintMode="add"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +48,6 @@
                     android:id="@+id/textView7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="17dp"
                     android:fontFamily="@font/assistant"
                     android:paddingStart="15dp"
                     android:text="Consult with top doctors"
@@ -420,10 +416,10 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_margin="2dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="1dp">
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -452,10 +448,10 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_margin="2dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="1dp">
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -487,7 +483,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginEnd="5dp"
                 android:background="@drawable/shape"
                 android:orientation="horizontal"
@@ -499,12 +495,10 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_margin="2dp"
                     android:layout_weight="1"
-
-                    android:foregroundTint="#00F8F3F3"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="1dp">
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -536,10 +530,10 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_margin="2dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="1dp">
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -570,7 +564,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginEnd="5dp"
                 android:background="@drawable/shape"
                 android:orientation="horizontal"
@@ -582,10 +576,10 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_margin="2dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="1dp">
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -614,10 +608,10 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_margin="2dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="1dp">
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -646,12 +640,10 @@
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
-                android:layout_width="395dp"
+                android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:layout_marginTop="3dp"
                 android:background="#E95C6BC0"
                 android:minHeight="?attr/actionBarSize"
-                android:paddingLeft="10dp"
                 android:theme="?attr/actionBarTheme"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
