@@ -32,7 +32,20 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#E95C6BC0"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/menu"
+                app:subtitleTextColor="#FFFFFF" />
 
             <LinearLayout
                 android:id="@+id/linearLayout3"
@@ -50,6 +63,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/assistant"
                     android:paddingStart="15dp"
+                    android:paddingTop="10dp"
                     android:text="Consult with top doctors"
                     android:textAlignment="textStart"
                     android:textColor="#ffffff"
@@ -390,14 +404,380 @@
                 <View
                     android:id="@+id/divider2"
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"
+                    android:layout_height="0dp"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
-                    android:background="#ffffff"
                     android:visibility="visible" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout3">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textView42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/assistant"
+                        android:paddingStart="15dp"
+                        android:paddingTop="2dp"
+                        android:text="Book an appointment for in-clinic consultation"
+                        android:textAlignment="textStart"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/assistant"
+                        android:paddingStart="15dp"
+                        android:paddingTop="24dp"
+                        android:paddingBottom="8dp"
+                        android:text="Find experienced doctors across all specialties"
+                        android:textAlignment="textStart"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="294dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@drawable/dentist" />
+
+                                <TextView
+                                    android:id="@+id/textView30"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerInParent="false"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginBottom="22dp"
+                                    android:fontFamily="@font/assistant"
+                                    android:text="Dentist"
+                                    android:textAlignment="center"
+                                    android:textColor="#000"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView31"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerInParent="false"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/assistant"
+                                    android:text="Teething Problems?Schedule a Dental Checkup!"
+                                    android:textAlignment="textStart"
+                                    android:textColor="#000"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="294dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageViewg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@drawable/dietitian" />
+
+                                <TextView
+                                    android:id="@+id/textView32"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerInParent="false"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginBottom="22dp"
+                                    android:fontFamily="@font/assistant"
+                                    android:text="Dietitian"
+                                    android:textAlignment="center"
+                                    android:textColor="#000"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView33"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerInParent="false"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/assistant"
+                                    android:text="Get Guidance on eating right,weight loss"
+                                    android:textAlignment="textStart"
+                                    android:textColor="#000"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="294dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageViewd"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@drawable/gynecologist" />
+
+                                <TextView
+                                    android:id="@+id/textView34"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerInParent="false"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginBottom="22dp"
+                                    android:fontFamily="@font/assistant"
+                                    android:text="Gynaecologist"
+                                    android:textAlignment="center"
+                                    android:textColor="#000"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView35"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerInParent="false"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/assistant"
+                                    android:text="Explore for women’s health, pregnancy"
+                                    android:textAlignment="textStart"
+                                    android:textColor="#000"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="294dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageViewdd"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@drawable/physiotherapist" />
+
+                                <TextView
+                                    android:id="@+id/textView37"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerInParent="false"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginBottom="22dp"
+                                    android:fontFamily="@font/assistant"
+                                    android:text="Physiotherapist"
+                                    android:textAlignment="center"
+                                    android:textColor="#000"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView36"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerInParent="false"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/assistant"
+                                    android:text="Pulled a muscle? Get it treated."
+                                    android:textAlignment="textStart"
+                                    android:textColor="#000"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="294dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageViewgs"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@drawable/gsurgeon" />
+
+                                <TextView
+                                    android:id="@+id/textView38"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerInParent="false"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginBottom="22dp"
+                                    android:fontFamily="@font/assistant"
+                                    android:text="General Surgeon"
+                                    android:textAlignment="center"
+                                    android:textColor="#000"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView39"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerInParent="false"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/assistant"
+                                    android:text="Need to get operated?Find the right surgeon"
+                                    android:textAlignment="textStart"
+                                    android:textColor="#000"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="294dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageViewor"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@drawable/orthopedist" />
+
+                                <TextView
+                                    android:id="@+id/textView40"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerInParent="false"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginBottom="22dp"
+                                    android:fontFamily="@font/assistant"
+                                    android:text="Orthopedist"
+                                    android:textAlignment="center"
+                                    android:textColor="#000"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView41"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerInParent="false"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/assistant"
+                                    android:text="For Bone and Joints issues, spinal injuries."
+                                    android:textAlignment="textStart"
+                                    android:textColor="#000"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
             </LinearLayout>
 
             <LinearLayout
@@ -405,13 +785,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="5dp"
                 android:background="@drawable/shape"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+                app:layout_constraintTop_toBottomOf="@+id/LinearLayout5">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
@@ -430,7 +810,7 @@
                             android:layout_width="180dp"
                             android:layout_height="100dp"
                             android:layout_centerHorizontal="true"
-                            app:srcCompat="@drawable/find_clinic" />
+                            app:srcCompat="@drawable/hospital3" />
 
                         <TextView
                             android:id="@+id/textView23"
@@ -440,6 +820,7 @@
                             android:layout_marginTop="100dp"
                             android:fontFamily="@font/assistant"
                             android:text="Find Clinic"
+                            android:textColor="#5c6bc0"
                             android:textSize="24sp"
                             android:textStyle="bold" />
                     </RelativeLayout>
@@ -462,7 +843,8 @@
                             android:layout_width="190dp"
                             android:layout_height="100dp"
                             android:adjustViewBounds="false"
-                            app:srcCompat="@drawable/doctor" />
+                            android:paddingLeft="20dp"
+                            app:srcCompat="@drawable/doctor22" />
 
                         <TextView
                             android:id="@+id/textView24"
@@ -472,6 +854,7 @@
                             android:layout_marginTop="100dp"
                             android:fontFamily="@font/assistant"
                             android:text="Search Doctors"
+                            android:textColor="#5c6bc0"
                             android:textSize="24sp"
                             android:textStyle="bold" />
                     </RelativeLayout>
@@ -483,7 +866,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="6dp"
                 android:layout_marginEnd="5dp"
                 android:background="@drawable/shape"
                 android:orientation="horizontal"
@@ -510,7 +893,8 @@
                             android:layout_height="100dp"
                             android:layout_centerHorizontal="true"
                             android:elevation="1dp"
-                            app:srcCompat="@drawable/selfdiagnose" />
+                            android:paddingRight="14dp"
+                            app:srcCompat="@drawable/diagnose2" />
 
                         <TextView
                             android:id="@+id/textView27"
@@ -520,6 +904,7 @@
                             android:layout_marginTop="100dp"
                             android:fontFamily="@font/assistant"
                             android:text="Self Diagnose"
+                            android:textColor="#5c6bc0"
                             android:textSize="24sp"
                             android:textStyle="bold" />
                     </RelativeLayout>
@@ -543,7 +928,8 @@
                             android:id="@+id/imageView16"
                             android:layout_width="180dp"
                             android:layout_height="100dp"
-                            app:srcCompat="@drawable/labreports" />
+                            android:paddingLeft="20dp"
+                            app:srcCompat="@drawable/reports2" />
 
                         <TextView
                             android:id="@+id/textView25"
@@ -553,6 +939,7 @@
                             android:layout_marginTop="100dp"
                             android:fontFamily="@font/assistant"
                             android:text="Lab Reports"
+                            android:textColor="#5c6bc0"
                             android:textSize="24sp"
                             android:textStyle="bold" />
                     </RelativeLayout>
@@ -561,10 +948,11 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/linearLayout4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="6dp"
                 android:layout_marginEnd="5dp"
                 android:background="@drawable/shape"
                 android:orientation="horizontal"
@@ -586,20 +974,22 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:id="@+id/imageView19"
+                            android:id="@+id/imageView18"
                             android:layout_width="180dp"
-                            android:layout_height="100dp"
+                            android:layout_height="90dp"
                             android:layout_centerHorizontal="true"
-                            app:srcCompat="@drawable/order_medicine" />
+                            android:paddingTop="10dp"
+                            app:srcCompat="@drawable/chat" />
 
                         <TextView
-                            android:id="@+id/textView29"
+                            android:id="@+id/textView28"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="100dp"
                             android:fontFamily="@font/assistant"
-                            android:text="Medicines"
+                            android:text="Ask an Expert"
+                            android:textColor="#5c6bc0"
                             android:textSize="24sp"
                             android:textStyle="bold" />
                     </RelativeLayout>
@@ -618,38 +1008,28 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:id="@+id/imageView18"
+                            android:id="@+id/imageView19"
                             android:layout_width="180dp"
                             android:layout_height="100dp"
                             android:layout_centerHorizontal="true"
-                            app:srcCompat="@drawable/expert" />
+                            android:paddingLeft="20dp"
+                            app:srcCompat="@drawable/medicine2" />
 
                         <TextView
-                            android:id="@+id/textView28"
+                            android:id="@+id/textView29"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="100dp"
                             android:fontFamily="@font/assistant"
-                            android:text="Ask an Expert"
+                            android:text="Medicines"
+                            android:textColor="#5c6bc0"
                             android:textSize="24sp"
                             android:textStyle="bold" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
-            </LinearLayout>
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:background="#E95C6BC0"
-                android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/actionBarTheme"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:navigationIcon="@drawable/menu"
-                app:subtitleTextColor="#FFFFFF" />
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
