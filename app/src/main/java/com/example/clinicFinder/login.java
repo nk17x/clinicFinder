@@ -62,7 +62,9 @@ public class login extends AppCompatActivity {
                     passwordedit.setError("Enter Valid Password");
                     return;
                 }
+
                 String str = email;
+                final String adminemail=email;
                 String [] twoStringArray= str.split("@",2);
                 final String username= twoStringArray[0];
                 mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -70,10 +72,15 @@ public class login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Log.i("login","login is going");
+                            if(adminemail.equals("admin@gmail.com")){
+                                Intent i2 =new Intent(login.this,adminactivity.class);
+                                startActivity(i2);
+                                finish();
+                            }else{
                             Intent i =new Intent(login.this,MainActivity.class);
                             i.putExtra("usernameintent",username);
                             startActivity(i);
-                            finish();
+                            finish();}
                         }else{
 
                             Toast.makeText(login.this, "enter valid details...", Toast.LENGTH_SHORT).show();
