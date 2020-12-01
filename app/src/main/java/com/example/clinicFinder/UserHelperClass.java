@@ -6,9 +6,6 @@ public class UserHelperClass {
     String email;
     String username;
 
-    public UserHelperClass() {
-
-    }
 
     public String getFullname() {
         return fullname;
