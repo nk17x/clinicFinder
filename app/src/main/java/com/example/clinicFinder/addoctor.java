@@ -53,7 +53,7 @@ public class addoctor extends AppCompatActivity implements AdapterView.OnItemSel
         choices.add("Gynaecologist");
         choices.add("Dermatologist");
         choices.add("Neurologist");
-        choices.add("Gasrtology");
+        choices.add("Gastrology");
         choices.add("pediatrics");
         choices.add("urology");
         ArrayAdapter<CharSequence> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, choices);
@@ -95,6 +95,7 @@ public class addoctor extends AppCompatActivity implements AdapterView.OnItemSel
                 databaseReference = FirebaseDatabase.getInstance().getReference("doctors");
                 helperClass= new DoctorHelperClass(doctorname,selectedSpeciality,selectedExperience);
                 databaseReference.child(selectedSpeciality).child(doctorname).setValue(helperClass);
+                editTextDoctorName.setText("");
             }
         });
 
@@ -102,8 +103,6 @@ public class addoctor extends AppCompatActivity implements AdapterView.OnItemSel
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         selectedSpeciality = dynamicListSpinner.getSelectedItem().toString();
         selectedExperience = experiencespinner.getSelectedItem().toString();
-
-
     }
     public void onNothingSelected(AdapterView<?> parent) {
     }

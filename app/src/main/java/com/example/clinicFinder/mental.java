@@ -6,16 +6,34 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-public class mental extends AppCompatActivity {
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.FirebaseDatabase;
 
+public class mental extends AppCompatActivity {
+    private RecyclerView recyclermental;
+    private MentalPostAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mental);
-        RecyclerView mentallist=(RecyclerView) findViewById(R.id.mentallist);
-        mentallist.setLayoutManager(new LinearLayoutManager(this));
-        String[] names={"nadeem","zeeshan","hello","there","nadeem","zeeshan","hello","there","nadeem","zeeshan","hello","there"};
-        String[] yearsexp={"5 years","7 years","3 years","4 years","5 years","7 years","3 years","4 years","5 years","7 years","3 years","4 years"};
-        mentallist.setAdapter(new mentalAdapter(names,yearsexp));
+        recyclermental=findViewById(R.id.recyclermental);
+        recyclermental.setLayoutManager(new LinearLayoutManager(this));
+        FirebaseRecyclerOptions<gastricpost> options =
+                new FirebaseRecyclerOptions.Builder<gastricpost>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("doctors/Neurologist"), gastricpost.class)
+                        .build();
+
+        adapter=new MentalPostAdapter(options);
+        recyclermental.setAdapter(adapter);
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        adapter.startListening();
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        adapter.stopListening();
     }
 }
