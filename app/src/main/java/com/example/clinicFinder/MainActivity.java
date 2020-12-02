@@ -200,7 +200,6 @@ Toolbar toolbar;
             case R.id.navaccount:
                 Intent intentaccount=new Intent(MainActivity.this,profile.class);
                 startActivity(intentaccount);
-                finish();
                 break;
         }
         return true;

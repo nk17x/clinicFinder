@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
@@ -12,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class infants extends AppCompatActivity {
     private RecyclerView recyclerinfants;
     private InfantsPostAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +28,12 @@ public class infants extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("doctors/pediatrics"), gastricpost.class)
                         .build();
 
-        adapter=new InfantsPostAdapter(options);
+        adapter=new InfantsPostAdapter(options,this);
         recyclerinfants.setAdapter(adapter);
+
+
+
+
     }
     @Override
     protected void onStart() {
@@ -36,4 +45,6 @@ public class infants extends AppCompatActivity {
         super.onStop();
         adapter.stopListening();
     }
+
+
 }

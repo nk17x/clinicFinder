@@ -13,28 +13,28 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.squareup.picasso.Picasso;
 
-public class PregnancyPostAdapter extends FirebaseRecyclerAdapter<gastricpost, PregnancyPostAdapter.PostViewHolder> {
+public class SearchPostAdapter extends FirebaseRecyclerAdapter<gastricpost, SearchPostAdapter.PostViewHolder> {
 
-
-    public PregnancyPostAdapter(@NonNull FirebaseRecyclerOptions<gastricpost> options) {
+    public SearchPostAdapter(@NonNull FirebaseRecyclerOptions<gastricpost> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull PregnancyPostAdapter.PostViewHolder holder, int position, @NonNull gastricpost model) {
+    protected void onBindViewHolder(@NonNull SearchPostAdapter.PostViewHolder holder, int position, @NonNull gastricpost model) {
         holder.title1.setText("Dr."+model.getDoctorname().toUpperCase());
         holder.title2.setText(model.getSelectedSpeciality());
         holder.title3.setText(model.getSelectedExperience());
         Picasso.get().load(model.getImgurl()).into(holder.imageView);
+
     }
 
     @NonNull
     @Override
-    public PregnancyPostAdapter.PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public SearchPostAdapter.PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item_layout, parent, false);
 
-        return new PregnancyPostAdapter.PostViewHolder(view);
+        return new SearchPostAdapter.PostViewHolder(view);
     }
 
     class PostViewHolder extends RecyclerView.ViewHolder{

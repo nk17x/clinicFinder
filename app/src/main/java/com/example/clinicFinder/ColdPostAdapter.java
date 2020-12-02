@@ -19,7 +19,7 @@ public class ColdPostAdapter extends FirebaseRecyclerAdapter<gastricpost, ColdPo
 
     @Override
     protected void onBindViewHolder(@NonNull ColdPostAdapter.PostViewHolder holder, int position, @NonNull gastricpost model) {
-        holder.title1.setText(model.getDoctorname());
+        holder.title1.setText("Dr."+model.getDoctorname().toUpperCase());
         holder.title2.setText(model.getSelectedSpeciality());
         holder.title3.setText(model.getSelectedExperience());
         Picasso.get().load(model.getImgurl()).into(holder.imageView);

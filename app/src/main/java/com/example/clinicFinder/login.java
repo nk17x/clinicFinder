@@ -35,10 +35,15 @@ public class login extends AppCompatActivity {
         usernameedit=findViewById(R.id.username);
         passwordedit=findViewById(R.id.password);
         if(mAuth.getCurrentUser() !=null){
+            if(mAuth.getCurrentUser().getEmail().equals("admin@gmail.com")){
+                Intent i2 =new Intent(login.this,adminactivity.class);
+                startActivity(i2);
+                finish();
+            }else{
             Intent i =new Intent(login.this,MainActivity.class);
             startActivity(i);
-            finish();
-        }
+            finish();}
+        }else{
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,7 +117,7 @@ public class login extends AppCompatActivity {
                        }
                    }               });
             }        });
-}
+}}
     public void initilaize() {
         button2 = findViewById(R.id.button2);
         signup = findViewById(R.id.signup);
