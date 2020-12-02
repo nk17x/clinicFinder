@@ -16,6 +16,7 @@ public class mental extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mental);
+
         recyclermental=findViewById(R.id.recyclermental);
         recyclermental.setLayoutManager(new LinearLayoutManager(this));
         FirebaseRecyclerOptions<gastricpost> options =

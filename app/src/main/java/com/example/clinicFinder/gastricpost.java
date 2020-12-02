@@ -3,9 +3,8 @@ package com.example.clinicFinder;
 public class gastricpost {
     String doctorname;
     String selectedExperience;
-
-    public gastricpost() {
-    }
+    String selectedSpeciality;
+    String imgurl;
 
     @Override
     public String toString() {
@@ -13,7 +12,26 @@ public class gastricpost {
                 "doctorname='" + doctorname + '\'' +
                 ", selectedExperience='" + selectedExperience + '\'' +
                 ", selectedSpeciality='" + selectedSpeciality + '\'' +
+                ", imgurl='" + imgurl + '\'' +
                 '}';
+    }
+
+    public gastricpost() {
+    }
+
+    public String getImgurl() {
+        return imgurl;
+    }
+
+    public void setImgurl(String imgurl) {
+        this.imgurl = imgurl;
+    }
+
+    public gastricpost(String doctorname, String selectedExperience, String selectedSpeciality, String imgurl) {
+        this.doctorname = doctorname;
+        this.selectedExperience = selectedExperience;
+        this.selectedSpeciality = selectedSpeciality;
+        this.imgurl = imgurl;
     }
 
     public String getDoctorname() {
@@ -40,5 +58,5 @@ public class gastricpost {
         this.selectedSpeciality = selectedSpeciality;
     }
 
-    String selectedSpeciality;
+
 }

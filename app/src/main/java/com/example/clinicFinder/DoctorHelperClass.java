@@ -4,11 +4,16 @@ public class DoctorHelperClass {
     String selectedExperience;
     String doctorname;
     String selectedSpeciality;
+    String imgurl;
 
 
+    public String getimgurl() {
+        return imgurl;
+    }
 
-
-
+    public void setimgurl(String imgurl) {
+        this.imgurl = imgurl;
+    }
 
     public String getSelectedExperience() {
         return selectedExperience;
@@ -35,13 +40,10 @@ public class DoctorHelperClass {
     }
 
 
-
-
-
-    public DoctorHelperClass( String doctorname, String selectedSpeciality, String selectedExperience) {
+    public DoctorHelperClass(String doctorname, String selectedSpeciality, String selectedExperience,String imgurl) {
         this.selectedExperience = selectedExperience;
         this.doctorname = doctorname;
         this.selectedSpeciality = selectedSpeciality;
-
+        this.imgurl = imgurl;
     }
 }

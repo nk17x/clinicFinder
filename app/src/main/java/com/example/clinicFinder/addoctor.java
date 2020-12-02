@@ -1,35 +1,47 @@
 package com.example.clinicFinder;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentResolver;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
+import android.os.Handler;
 import android.view.View;
+import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class addoctor extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    Spinner dynamicListSpinner,experiencespinner;
+    Spinner dynamicListSpinner, experiencespinner;
     EditText editTextDoctorName;
     TextView textView44;
-    Button button10;
+    Button button10, button12;
+    ProgressBar progressBar;
+    ImageView imageView;
     String selectedExperience;
     String doctorname;
     String selectedSpeciality;
@@ -37,15 +49,21 @@ public class addoctor extends AppCompatActivity implements AdapterView.OnItemSel
     FirebaseDatabase rootNode;
     DatabaseReference databaseReference;
     DoctorHelperClass helperClass;
+    private static final int PICK_IMAGE_REQUEST = 1;
+    Uri mImageURi;
+    StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addoctor);
-        mAuth=FirebaseAuth.getInstance();
-        textView44=findViewById(R.id.textView44);
-        editTextDoctorName=findViewById(R.id.editTextdoctorname);
-        button10=findViewById(R.id.button10);
+        mAuth = FirebaseAuth.getInstance();
+        textView44 = findViewById(R.id.textView44);
+        editTextDoctorName = findViewById(R.id.editTextdoctorname);
+        button10 = findViewById(R.id.button10);
+        button12 = findViewById(R.id.button12);
+        progressBar = findViewById(R.id.progressBar);
+        imageView = findViewById(R.id.imageView4);
         dynamicListSpinner = findViewById(R.id.spinner1);
         experiencespinner = findViewById(R.id.spinner2);
         List<CharSequence> choices = new ArrayList<>();
@@ -89,22 +107,89 @@ public class addoctor extends AppCompatActivity implements AdapterView.OnItemSel
         button10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                doctorname=editTextDoctorName.getText().toString();
-                Toast.makeText(addoctor.this, doctorname+" "+selectedSpeciality+" "+selectedExperience, Toast.LENGTH_SHORT).show();
-                rootNode=FirebaseDatabase.getInstance();
+                doctorname = editTextDoctorName.getText().toString();
+                rootNode = FirebaseDatabase.getInstance();
+                storageReference = FirebaseStorage.getInstance().getReference("doctors/" + selectedSpeciality);
                 databaseReference = FirebaseDatabase.getInstance().getReference("doctors");
-                helperClass= new DoctorHelperClass(doctorname,selectedSpeciality,selectedExperience);
-                databaseReference.child(selectedSpeciality).child(doctorname).setValue(helperClass);
                 editTextDoctorName.setText("");
+                uploadFile();
             }
         });
 
+        button12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openFileChooser();
+            }
+        });
+
+    }/*oncreateends*/
+
+    private void openFileChooser() {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(intent, PICK_IMAGE_REQUEST);
     }
+
+    private String getFileExtension(Uri uri) {
+        ContentResolver cR = getContentResolver();
+        MimeTypeMap mime = MimeTypeMap.getSingleton();
+        return mime.getExtensionFromMimeType(cR.getType(uri));
+    }
+
+    private void uploadFile() {
+        if (mImageURi != null) {
+            final StorageReference fileReference = storageReference.child(doctorname + "." + getFileExtension(mImageURi));
+            fileReference.putFile(mImageURi).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        @Override
+                        public void onSuccess(Uri uri) {
+                            String imgurl = uri.toString();
+                            helperClass = new DoctorHelperClass(doctorname, selectedSpeciality, selectedExperience, imgurl);
+                            databaseReference.child(selectedSpeciality).child(doctorname).setValue(helperClass);
+                        }
+                    });
+                    Toast.makeText(addoctor.this, "Doctor added Succesfully", Toast.LENGTH_SHORT).show();
+                    imageView.setImageResource(R.drawable.docdark);
+
+                }
+
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(addoctor.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
+                    double progress = (100.0 * taskSnapshot.getBytesTransferred() / taskSnapshot.getTotalByteCount());
+                    progressBar.setProgress((int) progress);
+                }
+            });
+        } else {
+            Toast.makeText(this, "image not selected", Toast.LENGTH_SHORT).show();
+        }
+    }
+
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         selectedSpeciality = dynamicListSpinner.getSelectedItem().toString();
         selectedExperience = experiencespinner.getSelectedItem().toString();
+    }//this is for dropdown list
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            mImageURi = data.getData();
+            Picasso.get().load(mImageURi).into(imageView);
+        }
     }
+
     public void onNothingSelected(AdapterView<?> parent) {
+
     }
 
 

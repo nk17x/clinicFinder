@@ -5,7 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,15 +13,12 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.squareup.picasso.Picasso;
 
-public class MentalPostAdapter extends FirebaseRecyclerAdapter<gastricpost, MentalPostAdapter.PostViewHolder> {
-
-
-    public MentalPostAdapter(@NonNull FirebaseRecyclerOptions<gastricpost> options) {
-        super(options);
-    }
+public class ColdPostAdapter extends FirebaseRecyclerAdapter<gastricpost, ColdPostAdapter.PostViewHolder> {public ColdPostAdapter(@NonNull FirebaseRecyclerOptions<gastricpost> options) {
+    super(options);
+}
 
     @Override
-    protected void onBindViewHolder(@NonNull PostViewHolder holder, int position, @NonNull gastricpost model) {
+    protected void onBindViewHolder(@NonNull ColdPostAdapter.PostViewHolder holder, int position, @NonNull gastricpost model) {
         holder.title1.setText(model.getDoctorname());
         holder.title2.setText(model.getSelectedSpeciality());
         holder.title3.setText(model.getSelectedExperience());
@@ -31,11 +27,11 @@ public class MentalPostAdapter extends FirebaseRecyclerAdapter<gastricpost, Ment
 
     @NonNull
     @Override
-    public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ColdPostAdapter.PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item_layout, parent, false);
 
-        return new MentalPostAdapter.PostViewHolder(view);
+        return new ColdPostAdapter.PostViewHolder(view);
     }
 
     class PostViewHolder extends RecyclerView.ViewHolder{
