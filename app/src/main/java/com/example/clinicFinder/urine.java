@@ -23,7 +23,7 @@ public class urine extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("doctors/urology"), gastricpost.class)
                         .build();
 
-        adapter=new UrinePostAdapter(options);
+        adapter=new UrinePostAdapter(options,this);
         recyclerurine.setAdapter(adapter);
     }
     @Override

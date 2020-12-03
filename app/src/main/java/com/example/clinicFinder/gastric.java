@@ -23,7 +23,7 @@ public class gastric extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("doctors/Gastrology"), gastricpost.class)
                         .build();
 
-        adapter=new GastricPostAdapter(options);
+        adapter=new GastricPostAdapter(options,this);
         recyclergastric.setAdapter(adapter);
 
 

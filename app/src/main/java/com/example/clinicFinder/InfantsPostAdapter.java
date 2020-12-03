@@ -61,7 +61,10 @@ Context context;
 
                     int itemPosition = getLayoutPosition();
                     String selected =getRef(itemPosition).getKey();
-                    Toast.makeText(context, selected, Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(context,bookAppointment.class);
+                    intent.putExtra("selectedDoctor",selected);
+                    intent.putExtra("speciality","doctors/pediatrics");
+                    context.startActivity(intent);
 
 
 

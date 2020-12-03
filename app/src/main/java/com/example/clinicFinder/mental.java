@@ -24,7 +24,7 @@ public class mental extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("doctors/Neurologist"), gastricpost.class)
                         .build();
 
-        adapter=new MentalPostAdapter(options);
+        adapter=new MentalPostAdapter(options,this);
         recyclermental.setAdapter(adapter);
     }
     @Override

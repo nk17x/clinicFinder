@@ -23,7 +23,7 @@ public class cold extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("doctors/General Physician"), gastricpost.class)
                         .build();
 
-        adapter=new ColdPostAdapter(options);
+        adapter=new ColdPostAdapter(options,this);
         recyclercold.setAdapter(adapter);
     }
     @Override

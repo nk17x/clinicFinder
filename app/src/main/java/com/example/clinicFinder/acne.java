@@ -35,7 +35,7 @@ public class acne extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("doctors/Dermatologist"), gastricpost.class)
                         .build();
 
-        adapter=new AcnePostAdapter(options);
+        adapter=new AcnePostAdapter(options,this);
         recycleracne.setAdapter(adapter);
     }
     @Override

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -23,6 +24,8 @@ public class search_doctors extends AppCompatActivity implements AdapterView.OnI
     Spinner dynamicListSpinner;
     String selectedSpeciality;
     Button button11;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +55,7 @@ public class search_doctors extends AppCompatActivity implements AdapterView.OnI
                                 .setQuery(FirebaseDatabase.getInstance().getReference().child("doctors/"+selectedSpeciality), gastricpost.class)
                                 .build();
 
-                adapter=new SearchPostAdapter(options);
+                adapter=new SearchPostAdapter(options,selectedSpeciality);
                 recyclersearch.setAdapter(adapter);
                 adapter.startListening();
             }

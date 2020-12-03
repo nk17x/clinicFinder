@@ -1,5 +1,7 @@
 package com.example.clinicFinder;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +16,10 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.squareup.picasso.Picasso;
 
 public class AcnePostAdapter extends FirebaseRecyclerAdapter<gastricpost, AcnePostAdapter.PostViewHolder> {
-
-    public AcnePostAdapter(@NonNull FirebaseRecyclerOptions<gastricpost> options) {
+Context context;
+    public AcnePostAdapter(@NonNull FirebaseRecyclerOptions<gastricpost> options,Context context) {
         super(options);
+        this.context=context;
     }
 
     @Override
@@ -45,6 +48,18 @@ public class AcnePostAdapter extends FirebaseRecyclerAdapter<gastricpost, AcnePo
             title2=itemView.findViewById(R.id.title2);
             title3=itemView.findViewById(R.id.title3);
             imageView=itemView.findViewById(R.id.image1);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int itemPosition = getLayoutPosition();
+                    String selected =getRef(itemPosition).getKey();
+                    Intent intent=new Intent(context,bookAppointment.class);
+                    intent.putExtra("selectedDoctor",selected);
+                    intent.putExtra("speciality","doctors/Dermatologist");
+                    context.startActivity(intent);
+
+                }
+            });
 
         }
     }

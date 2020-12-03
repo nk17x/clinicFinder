@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.clinicFinder">
-<uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/heart_health"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".addoctor"></activity>
+        <activity android:name=".bookAppointment"></activity>
+        <activity android:name=".addoctor" />
         <activity android:name=".appointment" />
         <activity android:name=".query" />
         <activity android:name=".adddoctor" />

@@ -201,6 +201,14 @@ Toolbar toolbar;
                 Intent intentaccount=new Intent(MainActivity.this,profile.class);
                 startActivity(intentaccount);
                 break;
+            case R.id.navappointments:
+                Intent intentappointment=new Intent(MainActivity.this,appointment.class);
+                startActivity(intentappointment);
+                break;
+            case R.id.navdoctors:
+                Intent intentdoctors=new Intent(MainActivity.this,search_doctors.class);
+                startActivity(intentdoctors);
+                break;
         }
         return true;
     }

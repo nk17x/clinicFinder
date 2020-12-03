@@ -23,7 +23,7 @@ public class pregnancy extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("doctors/Gynaecologist"), gastricpost.class)
                         .build();
 
-        adapter=new PregnancyPostAdapter(options);
+        adapter=new PregnancyPostAdapter(options,this);
         recyclerpregnancy.setAdapter(adapter);
     }
     @Override
