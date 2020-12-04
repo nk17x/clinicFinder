@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="150dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_margin="4dp"
+    android:layout_marginTop="0dp"
+    android:background="@drawable/shape2">
 
 
         <TextView
@@ -10,11 +13,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="false"
-            android:layout_marginStart="165dp"
-            android:layout_marginTop="110dp"
-            android:text="know more"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="115dp"
+            android:text="Book Appointment"
             android:textAlignment="center"
-            android:textColor="#42A5F5"
+            android:textColor="#000"
             android:textSize="18sp" />
 
         <ImageView
@@ -62,7 +65,6 @@
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="18sp" />
-
 
 
 </RelativeLayout>

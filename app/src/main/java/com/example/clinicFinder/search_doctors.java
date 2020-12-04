@@ -33,6 +33,7 @@ public class search_doctors extends AppCompatActivity implements AdapterView.OnI
         button11=findViewById(R.id.button11);
         dynamicListSpinner = findViewById(R.id.spinnersearch);
         List<CharSequence> choices = new ArrayList<>();
+        choices.add("Select Speciality");
         choices.add("General Physician");
         choices.add("Gynaecologist");
         choices.add("Dermatologist");
@@ -67,6 +68,7 @@ public class search_doctors extends AppCompatActivity implements AdapterView.OnI
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        if(!dynamicListSpinner.getSelectedItem().toString().equals("Select Speciality"))
         selectedSpeciality = dynamicListSpinner.getSelectedItem().toString();
 
     }

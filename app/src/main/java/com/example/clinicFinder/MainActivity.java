@@ -58,8 +58,6 @@ Toolbar toolbar;
         imageView15=findViewById(R.id.imageView15);
         imageView17=findViewById(R.id.imageView17);
         imageView16=findViewById(R.id.imageView16);
-        imageView19=findViewById(R.id.imageView19);
-        imageView18=findViewById(R.id.imageView18);
         drawerLayout=findViewById(R.id.drawer_layout);
         toolbar=findViewById(R.id.toolbar);
         navigationView=findViewById(R.id.nav_view);
@@ -137,14 +135,14 @@ Toolbar toolbar;
         imageView14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i =new Intent(MainActivity.this,find_clinic.class);
+                Intent i =new Intent(MainActivity.this,search_doctors.class);
                 startActivity(i);
             }
         });
         imageView15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i =new Intent(MainActivity.this,search_doctors.class);
+                Intent i =new Intent(MainActivity.this,appointment.class);
                 startActivity(i);            }
         });
         imageView17.setOnClickListener(new View.OnClickListener() {
@@ -159,18 +157,7 @@ Toolbar toolbar;
                 Intent i =new Intent(MainActivity.this,lab_reports.class);
                 startActivity(i);            }
         });
-        imageView19.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i =new Intent(MainActivity.this,order_medicines.class);
-                startActivity(i);            }
-        });
-        imageView18.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i =new Intent(MainActivity.this,expert.class);
-                startActivity(i);            }
-        });
+
 
 
 
