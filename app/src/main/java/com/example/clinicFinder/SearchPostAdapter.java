@@ -26,7 +26,7 @@ String xspeciality;
     protected void onBindViewHolder(@NonNull SearchPostAdapter.PostViewHolder holder, int position, @NonNull gastricpost model) {
         holder.title1.setText("Dr."+model.getDoctorname().toUpperCase());
         holder.title2.setText(model.getSelectedSpeciality());
-        holder.title3.setText(model.getSelectedExperience());
+        holder.title3.setText(model.getSelectedExperience()+" Experience");
         Picasso.get().load(model.getImgurl()).into(holder.imageView);
 
     }

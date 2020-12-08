@@ -16,18 +16,10 @@
             android:id="@+id/navdoctors"
             android:title="Doctors"
             android:icon="@drawable/navmydoctor"/>
-        <item
-            android:id="@+id/navclinic"
-            android:title="Clinic"
-            android:icon="@drawable/navclinic"/>
 
         <item
-            android:id="@+id/navconsultations"
-            android:title="Consultations"
-            android:icon="@drawable/navconsultation"/>
-        <item
             android:id="@+id/navmedicalrecords"
-            android:title="Records"
+            android:title="Medical Reports"
             android:icon="@drawable/record">
         </item></group>
     <group android:checkableBehavior="single">

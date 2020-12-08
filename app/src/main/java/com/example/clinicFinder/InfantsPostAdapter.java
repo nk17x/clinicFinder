@@ -54,6 +54,7 @@ Context context;
             title1=itemView.findViewById(R.id.title1);
             title2=itemView.findViewById(R.id.title2);
             title3=itemView.findViewById(R.id.title3);
+
             imageView=itemView.findViewById(R.id.image1);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

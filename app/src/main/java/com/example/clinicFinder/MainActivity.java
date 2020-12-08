@@ -196,6 +196,10 @@ Toolbar toolbar;
                 Intent intentdoctors=new Intent(MainActivity.this,search_doctors.class);
                 startActivity(intentdoctors);
                 break;
+            case R.id.navmedicalrecords:
+                Intent intentmedicalrecords=new Intent(MainActivity.this,lab_reports.class);
+                startActivity(intentmedicalrecords);
+                break;
         }
         return true;
     }

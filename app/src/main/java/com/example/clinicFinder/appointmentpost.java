@@ -2,28 +2,23 @@ package com.example.clinicFinder;
 
 public class appointmentpost {
     String doctorname;
-    String datetime;
+    String dbdate;
+    String dbtime;
     String imgurl;
     String speciality;
+
+    public appointmentpost() {
+    }
 
     @Override
     public String toString() {
         return "appointmentpost{" +
                 "doctorname='" + doctorname + '\'' +
-                ", datetime='" + datetime + '\'' +
+                ", dbdate='" + dbdate + '\'' +
+                ", dbtime='" + dbtime + '\'' +
                 ", imgurl='" + imgurl + '\'' +
                 ", speciality='" + speciality + '\'' +
                 '}';
-    }
-
-    public appointmentpost(String doctorname, String datetime, String imgurl, String speciality) {
-        this.doctorname = doctorname;
-        this.datetime = datetime;
-        this.imgurl = imgurl;
-        this.speciality = speciality;
-    }
-
-    public appointmentpost() {
     }
 
     public String getDoctorname() {
@@ -34,12 +29,20 @@ public class appointmentpost {
         this.doctorname = doctorname;
     }
 
-    public String getDatetime() {
-        return datetime;
+    public String getDbdate() {
+        return dbdate;
     }
 
-    public void setDatetime(String datetime) {
-        this.datetime = datetime;
+    public void setDbdate(String dbdate) {
+        this.dbdate = dbdate;
+    }
+
+    public String getDbtime() {
+        return dbtime;
+    }
+
+    public void setDbtime(String dbtime) {
+        this.dbtime = dbtime;
     }
 
     public String getImgurl() {

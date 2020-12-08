@@ -939,7 +939,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="100dp"
                             android:fontFamily="@font/assistant"
-                            android:text="Lab Reports"
+                            android:text="My Reports"
                             android:textColor="#5c6bc0"
                             android:textSize="24sp"
                             android:textStyle="bold" />

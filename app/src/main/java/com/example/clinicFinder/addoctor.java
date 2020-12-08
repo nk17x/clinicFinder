@@ -47,10 +47,10 @@ public class addoctor extends AppCompatActivity implements AdapterView.OnItemSel
     FirebaseAuth mAuth;
     FirebaseDatabase rootNode;
     DatabaseReference databaseReference;
+    StorageReference storageReference;
     DoctorHelperClass helperClass;
     private static final int PICK_IMAGE_REQUEST = 1;
     Uri mImageURi;
-    StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -177,6 +177,9 @@ public class addoctor extends AppCompatActivity implements AdapterView.OnItemSel
         selectedSpeciality = dynamicListSpinner.getSelectedItem().toString();
         selectedExperience = experiencespinner.getSelectedItem().toString();
     }//this is for dropdown list
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -187,9 +190,7 @@ public class addoctor extends AppCompatActivity implements AdapterView.OnItemSel
         }
     }
 
-    public void onNothingSelected(AdapterView<?> parent) {
 
-    }
 
 
 }
