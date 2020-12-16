@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class adminactivity extends AppCompatActivity {
     FirebaseAuth mAuth;
-    Button button3,button4,button5,button6;
+    Button button3,button4,button6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +22,11 @@ public class adminactivity extends AppCompatActivity {
         mAuth=FirebaseAuth.getInstance();
         button3=findViewById(R.id.button3);
         button4=findViewById(R.id.button4);
-        button5=findViewById(R.id.button5);
         button6=findViewById(R.id.button6);
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(adminactivity.this,adddoctor.class);
+                Intent i=new Intent(adminactivity.this,addoctor.class);
                 startActivity(i);
 
             }
@@ -35,19 +34,12 @@ public class adminactivity extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(adminactivity.this,query.class);
+                Intent i=new Intent(adminactivity.this,adminquery.class);
                 startActivity(i);
 
             }
         });
-        button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(adminactivity.this,appointment.class);
-                startActivity(i);
 
-            }
-        });
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

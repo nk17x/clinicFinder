@@ -904,7 +904,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="100dp"
                             android:fontFamily="@font/assistant"
-                            android:text="Self Diagnose"
+                            android:text="Querys"
                             android:textColor="#5c6bc0"
                             android:textSize="24sp"
                             android:textStyle="bold" />

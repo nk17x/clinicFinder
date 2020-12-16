@@ -21,6 +21,11 @@
             android:id="@+id/navmedicalrecords"
             android:title="Medical Reports"
             android:icon="@drawable/record">
+        </item>
+        <item
+            android:id="@+id/navquerys"
+            android:title="My Querys"
+            android:icon="@drawable/navreport">
         </item></group>
     <group android:checkableBehavior="single">
         <item
@@ -41,31 +46,4 @@
         </item>
     </group>
 
-    <group android:checkableBehavior="single">
-        <item
-            android:title="Connect to us">
-            <menu>
-                <item
-                    android:id="@+id/navabout"
-                    android:title="About Clinic Finder"
-                    android:icon="@drawable/navabout">
-
-                </item>
-                <item
-                    android:id="@+id/navcontact"
-                    android:title="Contact Us"
-                    android:icon="@drawable/navcontact">
-                </item>
-                <item
-                    android:id="@+id/navshare"
-                    android:title="Share to Friends"
-                    android:icon="@drawable/navshare">
-                </item>
-                <item
-                    android:id="@+id/navreport"
-                    android:title="Report Problem"
-                    android:icon="@drawable/navreport">
-                </item></menu>
-        </item>
-    </group>
 </menu>

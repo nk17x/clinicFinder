@@ -1,5 +1,6 @@
 package com.example.clinicFinder;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -148,7 +150,7 @@ Toolbar toolbar;
         imageView17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i =new Intent(MainActivity.this,self_diagnose.class);
+                Intent i =new Intent(MainActivity.this,query.class);
                 startActivity(i);            }
         });
         imageView16.setOnClickListener(new View.OnClickListener() {
@@ -168,8 +170,19 @@ Toolbar toolbar;
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
             drawerLayout.closeDrawer(GravityCompat.START);
         }else {
-            super.onBackPressed();
+            new AlertDialog.Builder(this)
+                    .setTitle("Really Exit?")
+                    .setMessage("Are you sure you want to exit?")
+                    .setNegativeButton(android.R.string.no, null)
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                        public void onClick(DialogInterface arg0, int arg1) {
+                            mAuth.signOut();
+                            MainActivity.super.onBackPressed();
+                        }
+                    }).create().show();
         }
+
     }
 
     @Override
@@ -200,7 +213,13 @@ Toolbar toolbar;
                 Intent intentmedicalrecords=new Intent(MainActivity.this,lab_reports.class);
                 startActivity(intentmedicalrecords);
                 break;
+            case R.id.navquerys:
+                Intent intentquerys=new Intent(MainActivity.this,query.class);
+                startActivity(intentquerys);
+                break;
         }
         return true;
     }
+
+
 }

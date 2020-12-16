@@ -66,6 +66,7 @@ public class addoctor extends AppCompatActivity implements AdapterView.OnItemSel
         dynamicListSpinner = findViewById(R.id.spinner1);
         experiencespinner = findViewById(R.id.spinner2);
         List<CharSequence> choices = new ArrayList<>();
+        choices.add("Select Speciality");
         choices.add("General Physician");
         choices.add("Gynaecologist");
         choices.add("Dermatologist");
@@ -78,6 +79,7 @@ public class addoctor extends AppCompatActivity implements AdapterView.OnItemSel
         dynamicListSpinner.setAdapter(adapter);
         dynamicListSpinner.setOnItemSelectedListener(this);
         List<CharSequence> choices2 = new ArrayList<>();
+        choices2.add("Select Experience");
         choices2.add("1 years");
         choices2.add("2 years");
         choices2.add("3 years");
